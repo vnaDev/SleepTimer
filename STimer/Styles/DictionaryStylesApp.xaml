@@ -22,6 +22,8 @@
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
+            <Setter Property="BorderBrush" Value="Indigo"/>
+            <Setter Property="BorderThickness" Value="1"/>
         </Style.Setters>
     </Style>
     
