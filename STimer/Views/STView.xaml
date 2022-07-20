@@ -9,13 +9,17 @@
     
     <StackPanel
         Orientation="Horizontal">
-        <TextBlock 
+        <Border BorderBrush="Black" BorderThickness="2" CornerRadius="13" 
+                Background="Transparent" Margin="21">
+            <TextBlock 
             Text="{Binding StringCountdown}"
             FontSize="55"
             TextAlignment="Center"
             Margin="22 5 22 5"
             VerticalAlignment="Center" 
             HorizontalAlignment="Center"/>
+        </Border>
+        
         <StackPanel
             Orientation="Vertical"
             VerticalAlignment="Center">

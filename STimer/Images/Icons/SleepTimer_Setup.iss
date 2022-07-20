@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "SleepTimer"
-#define MyAppVersion "1.1"
+#define MyAppVersion "1.2"
 #define MyAppPublisher "vnaDev"
 #define MyAppExeName "STimer.exe"
 #define MyAppAssocName MyAppName + " File"
@@ -12,7 +12,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{D2D39385-2BF9-440B-8ED0-D4C23D941DB5}
+AppId={{D9E06CFC-A19E-4D01-9C98-4F5012BEF564}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -24,7 +24,7 @@ AllowNoIcons=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=D:\soft\SleepTimer
-OutputBaseFilename=SleepTimer_Setup
+OutputBaseFilename=SleepTimer_setup
 SetupIconFile=D:\projects\SleepTimer-master\STimer\Images\Icons\sleepTimer.ico
 Compression=lzma
 SolidCompression=yes

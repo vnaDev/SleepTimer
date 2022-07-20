@@ -6,22 +6,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"         
     d:DesignHeight="130" d:DesignWidth="390">
-    
+
     <StackPanel
         Orientation="Horizontal"
         HorizontalAlignment="Center">
-        <ComboBox 
+        <ComboBox
             Name="hour"
             SelectedItem="{Binding SelectedHour, UpdateSourceTrigger=PropertyChanged}"
             ItemsSource="{Binding Hours, UpdateSourceTrigger=PropertyChanged}"
-            Style="{StaticResource ComboBoxAppStyle}">
-        </ComboBox>
+            Style="{StaticResource ComboboxStyle}"/>
         <ComboBox 
             Name="minute"
             SelectedItem="{Binding SelectedMinute, UpdateSourceTrigger=PropertyChanged}"
             ItemsSource="{Binding Minutes, UpdateSourceTrigger=PropertyChanged}"
-            Style="{StaticResource ComboBoxAppStyle}">
-        </ComboBox>
+            Style="{StaticResource ComboboxStyle}"/>
         <StackPanel
             Orientation="Vertical"
             VerticalAlignment="Center">
@@ -40,5 +38,5 @@
             </Button>
         </StackPanel>
     </StackPanel>
-    
+
 </UserControl>
