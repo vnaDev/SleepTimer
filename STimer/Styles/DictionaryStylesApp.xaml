@@ -6,8 +6,8 @@
         <Style.Setters>
             <Setter Property="MinHeight" Value="130"/>
             <Setter Property="MaxHeight" Value="130"/>
-            <Setter Property="MinWidth" Value="390"/>
-            <Setter Property="MaxWidth" Value="390"/>
+            <Setter Property="MinWidth" Value="470"/>
+            <Setter Property="MaxWidth" Value="470"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
             <Setter Property="VerticalContentAlignment" Value="Stretch"/>
@@ -28,21 +28,6 @@
         </Style.Setters>
     </Style>
 
-    <!--<ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
-        <Border BorderBrush="Orange" BorderThickness="3" CornerRadius="2"
-                    TextBlock.Foreground="White">
-            <Border.Background>
-                <LinearGradientBrush>
-                    <GradientStopCollection>
-                        <GradientStop Offset="0" Color="LimeGreen"></GradientStop>
-                        <GradientStop Offset="1" Color="LightBlue"></GradientStop>
-                    </GradientStopCollection>
-                </LinearGradientBrush>
-            </Border.Background>
-            <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
-        </Border>
-    </ControlTemplate>-->
-    
     <!--Стиль отображения кнопок-->
     <Style x:Key="ButtonAppStyle" TargetType="Button">
         <Style.Setters>
@@ -111,7 +96,7 @@
         <Setter Property="FontSize" Value="34"/>
         <Setter Property="FontStyle" Value="Italic"/>
         <Setter Property="SelectedItem" Value="{x:Null}"/>
-        <Setter Property="Margin" Value="8"/>
+        <Setter Property="Margin" Value="13"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ComboBox}">

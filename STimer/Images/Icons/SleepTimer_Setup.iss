@@ -12,7 +12,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{D9E06CFC-A19E-4D01-9C98-4F5012BEF564}
+AppId={{2953AB68-3490-420A-A01E-A39745D1C56F}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -23,7 +23,7 @@ DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=D:\soft\SleepTimer
+OutputDir=D:\soft
 OutputBaseFilename=SleepTimer_setup
 SetupIconFile=D:\projects\SleepTimer-master\STimer\Images\Icons\sleepTimer.ico
 Compression=lzma

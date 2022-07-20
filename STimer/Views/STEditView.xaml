@@ -10,16 +10,22 @@
     <StackPanel
         Orientation="Horizontal"
         HorizontalAlignment="Center">
-        <ComboBox
+        <StackPanel 
+            Orientation="Horizontal"
+            VerticalAlignment="Center"
+            Margin="21">
+            <ComboBox
             Name="hour"
             SelectedItem="{Binding SelectedHour, UpdateSourceTrigger=PropertyChanged}"
             ItemsSource="{Binding Hours, UpdateSourceTrigger=PropertyChanged}"
             Style="{StaticResource ComboboxStyle}"/>
-        <ComboBox 
+            <ComboBox 
             Name="minute"
             SelectedItem="{Binding SelectedMinute, UpdateSourceTrigger=PropertyChanged}"
             ItemsSource="{Binding Minutes, UpdateSourceTrigger=PropertyChanged}"
             Style="{StaticResource ComboboxStyle}"/>
+        </StackPanel>
+        
         <StackPanel
             Orientation="Vertical"
             VerticalAlignment="Center">
