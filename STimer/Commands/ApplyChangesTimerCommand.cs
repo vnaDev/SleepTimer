@@ -9,11 +9,11 @@ namespace STimer.Commands
     /// <summary>
     /// Команда - Принять изменения значений: количество часов, минут таймера
     /// </summary>
-    public class ApplyChangesCommand : BaseCommand
+    public class ApplyChangesTimerCommand : BaseCommand
     {
         private readonly SleepTimerEditViewModel _sleepTimerEditViewModel;
         private readonly NavigationStore _navigationStore;
-        public ApplyChangesCommand(SleepTimerEditViewModel sleepTimerEditViewModel,
+        public ApplyChangesTimerCommand(SleepTimerEditViewModel sleepTimerEditViewModel,
                                    NavigationStore navigationStore)
         {
             _sleepTimerEditViewModel = sleepTimerEditViewModel;

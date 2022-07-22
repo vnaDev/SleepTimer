@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="STimer.Views.EditColorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             d:DesignHeight="130" d:DesignWidth="550">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="55 0 0 0">
+                <RadioButton Content="DarkOrange" Padding="3"
+                             Command="{Binding ApplyChangeColorCommand}"
+                             CommandParameter="{StaticResource Brush_DarkOrange}"/>
+                <RadioButton Content="Volt" Padding="3"
+                             Command="{Binding ApplyChangeColorCommand}"
+                             CommandParameter="{StaticResource Brush_Volt}"/>
+                <RadioButton Content="Lime" Padding="3"
+                             Command="{Binding ApplyChangeColorCommand}"
+                             CommandParameter="{StaticResource Brush_Lime}"/>
+                <RadioButton Content="AbsoluteZero" Padding="3"
+                             Command="{Binding ApplyChangeColorCommand}"
+                             CommandParameter="{StaticResource Brush_AbsoluteZero}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="34 0 0 0">
+                <RadioButton Content="Indigo" Padding="3"
+                             Command="{Binding ApplyChangeColorCommand}"
+                             CommandParameter="{StaticResource Brush_Indigo}"/>
+                <RadioButton Content="CandyAppleRed" Padding="3"
+                             Command="{Binding ApplyChangeColorCommand}"
+                             CommandParameter="{StaticResource Brush_CandyAppleRed}"/>
+                <RadioButton Content="LightGray" Padding="3"
+                             Command="{Binding ApplyChangeColorCommand}"
+                             CommandParameter="{StaticResource Brush_LightGray}"/>
+                <RadioButton Content="NotColor" Padding="3"
+                             Command="{Binding ApplyChangeColorCommand}"
+                             CommandParameter="{StaticResource Brush_Transparent}"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="0 0 55 0"
+                        HorizontalAlignment="Right">
+            <Button x:Name="btnExit"
+                        Style="{StaticResource ButtonAppStyle}"
+                        Command="{Binding ExitAppCommand}"
+                        Content="Закрыть">
+            </Button>
+            <Button x:Name="btnApplyChangeColor" 
+                        Style="{StaticResource ResourceKey=ButtonAppStyle}"
+                        Command="{Binding ApplyChangeColorCommand}"
+                        Content="Применить цвет">
+            </Button>
+            <Button x:Name="btnReturn" 
+                        Style="{StaticResource ResourceKey=ButtonAppStyle}"
+                        Command="{Binding ReturnCommand}"
+                        Content="Назад">
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

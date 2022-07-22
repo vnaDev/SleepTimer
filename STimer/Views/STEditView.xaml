@@ -1,48 +1,32 @@
-﻿<UserControl 
-    x:Class="STimer.Views.STEditView"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"         
-    d:DesignHeight="130" d:DesignWidth="390">
+﻿<UserControl x:Class="STimer.Views.STEditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="130" d:DesignWidth="550">
 
-    <StackPanel
-        Orientation="Horizontal"
-        HorizontalAlignment="Center">
-        <StackPanel 
-            Orientation="Horizontal"
-            VerticalAlignment="Center"
-            Margin="21">
-            <ComboBox
-            Name="hour"
-            SelectedItem="{Binding SelectedHour, UpdateSourceTrigger=PropertyChanged}"
-            ItemsSource="{Binding Hours, UpdateSourceTrigger=PropertyChanged}"
-            Style="{StaticResource ComboboxStyle}"/>
-            <ComboBox 
-            Name="minute"
-            SelectedItem="{Binding SelectedMinute, UpdateSourceTrigger=PropertyChanged}"
-            ItemsSource="{Binding Minutes, UpdateSourceTrigger=PropertyChanged}"
-            Style="{StaticResource ComboboxStyle}"/>
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" 
+                    HorizontalAlignment="Left" Margin="55 0 0 0">
+            <ComboBox SelectedItem="{Binding SelectedHour, UpdateSourceTrigger=PropertyChanged}"
+                      ItemsSource="{Binding Hours, UpdateSourceTrigger=PropertyChanged}"
+                      Style="{StaticResource ComboboxStyle}"/>
+            <ComboBox SelectedItem="{Binding SelectedMinute, UpdateSourceTrigger=PropertyChanged}"
+                      ItemsSource="{Binding Minutes, UpdateSourceTrigger=PropertyChanged}"
+                      Style="{StaticResource ComboboxStyle}"/>
         </StackPanel>
-        
-        <StackPanel
-            Orientation="Vertical"
-            VerticalAlignment="Center">
-            <Button
-                x:Name="btnExit"
-                Style="{StaticResource ButtonAppStyle}"
-                Command="{Binding ExitAppCommand}"
-                Content="Закрыть">
-            </Button>
-            <Button
-            x:Name="btnApplyChanges"
-            Style="{StaticResource ResourceKey=ButtonAppStyle}"
-            Command="{Binding ApplyChangesCommand}"
-            CommandParameter="{Binding ElementName=WindowNameTobeClose}"
-            Content="Применить">
-            </Button>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center"
+                    HorizontalAlignment="Right"  Margin="0 0 89 0">
+            <Button Content="Закрыть"
+                    Style="{StaticResource ButtonAppStyle}"
+                    Command="{Binding ExitAppCommand}"/>
+            <Button Content="Настройки" 
+                    Style="{StaticResource ButtonAppStyle}"
+                    Command="{Binding NavigateToSettingsCommand}"/>
+            <Button Content="Применить"
+                    Style="{StaticResource ResourceKey=ButtonAppStyle}"
+                    Command="{Binding ApplyChangesCommand}"/>
         </StackPanel>
-    </StackPanel>
-
+    </Grid>
 </UserControl>

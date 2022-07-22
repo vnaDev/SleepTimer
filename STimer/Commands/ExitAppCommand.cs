@@ -8,7 +8,6 @@ namespace STimer.Commands
     /// </summary>
     public class ExitAppCommand : BaseCommand
     {
-        public override void Execute(object? parameter) => 
-            Application.Current.Shutdown();
+        public override void Execute(object? parameter) => Application.Current.Shutdown();
     }
 }

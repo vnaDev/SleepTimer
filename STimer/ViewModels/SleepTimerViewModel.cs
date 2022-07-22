@@ -56,6 +56,7 @@ namespace STimer.ViewModels
 
             StartTimerCommand = new StartTimerCommand(this);
             StopTimerCommand = new StopTimerCommand(this, navigationStore);
+            NavigateToSettingsCommand = new NavigateToSettingsCommand(navigationStore);
             ExitAppCommand = new ExitAppCommand();
         }
 
@@ -156,5 +157,10 @@ namespace STimer.ViewModels
         /// Команда для завершения работы приложения
         /// </summary>
         public ICommand ExitAppCommand { get; }
+
+        /// <summary>
+        /// Команда - Перейти в настройки
+        /// </summary>
+        public ICommand NavigateToSettingsCommand { get; }
     }
 }

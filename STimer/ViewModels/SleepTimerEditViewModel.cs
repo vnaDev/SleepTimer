@@ -46,7 +46,8 @@ namespace STimer.ViewModels
             _selectedHour = _hours[0];
             _selectedMinute = _minutes[1];
 
-            ApplyChangesCommand = new ApplyChangesCommand(this, navigationStore);
+            ApplyChangesCommand = new ApplyChangesTimerCommand(this, navigationStore);
+            NavigateToSettingsCommand = new NavigateToSettingsCommand(navigationStore);
             ExitAppCommand = new ExitAppCommand();
         }
 
@@ -119,5 +120,10 @@ namespace STimer.ViewModels
         /// Команда для завершения работы приложения
         /// </summary>
         public ICommand ExitAppCommand { get; }
+
+        /// <summary>
+        /// Команда - Перейти в настройки
+        /// </summary>
+        public ICommand NavigateToSettingsCommand { get; }
     }
 }

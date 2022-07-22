@@ -5,89 +5,57 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"         
-    d:DesignHeight="130" d:DesignWidth="390">
-    
-    <StackPanel
-        Orientation="Horizontal">
+    d:DesignHeight="130" d:DesignWidth="550">
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Border BorderBrush="Black" BorderThickness="2" CornerRadius="13" 
-                Background="Transparent" Margin="21">
-            <TextBlock 
-            Text="{Binding StringCountdown}"
-            FontSize="55"
-            TextAlignment="Center"
-            Margin="22 5 22 5"
-            VerticalAlignment="Center" 
-            HorizontalAlignment="Center"/>
+                Background="Transparent" Margin="34">
+            <TextBlock Text="{Binding StringCountdown}"
+                       FontSize="55"
+                       TextAlignment="Center"
+                       Padding="34"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Border>
-        
-        <StackPanel
-            Orientation="Vertical"
-            VerticalAlignment="Center">
-            <Button
-                x:Name="btnExit"
-                Style="{StaticResource ButtonAppStyle}"
-                Command="{Binding ExitAppCommand}"
-                Content="Закрыть">
-            </Button>
-            <Button
-            x:Name="btnStart"
-            Style="{StaticResource ResourceKey=ButtonAppStyle}"
-            Command="{Binding StartTimerCommand}"
-            Content="Включить таймер">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" 
+                    HorizontalAlignment="Right" Margin="0 0 55 0">
+            <Button x:Name="btnExit" Style="{StaticResource ButtonAppStyle}"
+                    Command="{Binding ExitAppCommand}" Content="Закрыть"/>
+            <Button x:Name="btnStart" Style="{StaticResource ResourceKey=ButtonAppStyle}"
+                    Command="{Binding StartTimerCommand}" Content="Включить таймер">
                 <Button.Triggers>
-                    <EventTrigger
-                    RoutedEvent="Button.Click">
+                    <EventTrigger RoutedEvent="Button.Click">
                         <BeginStoryboard>
                             <Storyboard>
-                                <ObjectAnimationUsingKeyFrames
-                                Duration="0"
-                                Storyboard.TargetName="btnStart"
-                                Storyboard.TargetProperty="Visibility">
-                                    <DiscreteObjectKeyFrame
-                                    KeyTime="0"
-                                    Value="{x:Static Visibility.Collapsed}"/>
+                                <ObjectAnimationUsingKeyFrames Duration="0" 
+                                                               Storyboard.TargetName="btnStart"
+                                                               Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
                                 </ObjectAnimationUsingKeyFrames>
-                                <ObjectAnimationUsingKeyFrames
-                                Duration="0"
-                                Storyboard.TargetName="btnStop"
-                                Storyboard.TargetProperty="Visibility">
-                                    <DiscreteObjectKeyFrame
-                                    KeyTime="0"
-                                    Value="{x:Static Visibility.Visible}">
-                                    </DiscreteObjectKeyFrame>
+                                <ObjectAnimationUsingKeyFrames Duration="0"
+                                                               Storyboard.TargetName="btnStop"
+                                                               Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                                 </ObjectAnimationUsingKeyFrames>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </Button.Triggers>
             </Button>
-            <Button 
-            x:Name="btnStop"
-            Style="{StaticResource ButtonAppStyle}"
-            Command="{Binding StopTimerCommand}"
-            Content="Отменить выключение"
-            Visibility="Collapsed">
+            <Button x:Name="btnStop" Style="{StaticResource ButtonAppStyle}"
+                    Command="{Binding StopTimerCommand}" Content="Отменить выключение" Visibility="Collapsed">
                 <Button.Triggers>
-                    <EventTrigger
-                    RoutedEvent="Button.Click">
+                    <EventTrigger RoutedEvent="Button.Click">
                         <BeginStoryboard>
                             <Storyboard>
-                                <ObjectAnimationUsingKeyFrames
-                                Duration="0"
-                                Storyboard.TargetName="btnStop"
-                                Storyboard.TargetProperty="Visibility">
-                                    <DiscreteObjectKeyFrame
-                                    KeyTime="0"
-                                    Value="{x:Static Visibility.Collapsed}"/>
+                                <ObjectAnimationUsingKeyFrames Duration="0" 
+                                                               Storyboard.TargetName="btnStop"
+                                                               Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
                                 </ObjectAnimationUsingKeyFrames>
-                                <ObjectAnimationUsingKeyFrames
-                                Duration="0"
-                                Storyboard.TargetName="btnStart"
-                                Storyboard.TargetProperty="Visibility">
-                                    <DiscreteObjectKeyFrame
-                                    KeyTime="0"
-                                    Value="{x:Static Visibility.Visible}">
-                                    </DiscreteObjectKeyFrame>
+                                <ObjectAnimationUsingKeyFrames Duration="0"
+                                                               Storyboard.TargetName="btnStart"
+                                                               Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                                 </ObjectAnimationUsingKeyFrames>
                             </Storyboard>
                         </BeginStoryboard>
@@ -96,5 +64,4 @@
             </Button>
         </StackPanel>
     </StackPanel>
-    
 </UserControl>

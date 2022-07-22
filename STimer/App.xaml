@@ -16,6 +16,10 @@
             <DataTemplate DataType="{x:Type viewModels:SleepTimerViewModel}">
                 <views:STView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:EditColorViewModel}">
+                <views:EditColorView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
