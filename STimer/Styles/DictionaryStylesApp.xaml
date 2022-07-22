@@ -42,7 +42,7 @@
                 </Setter.Value>
             </Setter>
             <Setter Property="BorderBrush" Value="{DynamicResource DynamicAppColor}"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="2"/>
         </Style.Setters>
     </Style>
 

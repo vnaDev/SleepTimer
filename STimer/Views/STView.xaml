@@ -13,7 +13,7 @@
             <TextBlock Text="{Binding StringCountdown}"
                        FontSize="55"
                        TextAlignment="Center"
-                       Padding="34"
+                       Padding="55"
                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Border>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" 

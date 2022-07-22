@@ -37,24 +37,17 @@
                              CommandParameter="{StaticResource Brush_Transparent}"/>
             </StackPanel>
         </StackPanel>
-        
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="0 0 55 0"
-                        HorizontalAlignment="Right">
+
+        <StackPanel Orientation="Vertical" Margin="0 0 55 0"
+                    VerticalAlignment="Center" HorizontalAlignment="Right">
             <Button x:Name="btnExit"
                         Style="{StaticResource ButtonAppStyle}"
                         Command="{Binding ExitAppCommand}"
-                        Content="Закрыть">
-            </Button>
-            <Button x:Name="btnApplyChangeColor" 
-                        Style="{StaticResource ResourceKey=ButtonAppStyle}"
-                        Command="{Binding ApplyChangeColorCommand}"
-                        Content="Применить цвет">
-            </Button>
+                        Content="Закрыть"/>
             <Button x:Name="btnReturn" 
                         Style="{StaticResource ResourceKey=ButtonAppStyle}"
                         Command="{Binding ReturnCommand}"
-                        Content="Назад">
-            </Button>
+                        Content="Назад"/>
         </StackPanel>
     </Grid>
 </UserControl>

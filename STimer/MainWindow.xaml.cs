@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace STimer
 {
@@ -8,7 +9,16 @@ namespace STimer
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow() => InitializeComponent();
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            // Загрузка из настроек Settings.settings
+            if (Properties.Settings.Default.CurrentDynamicAppColor == null || Properties.Settings.Default.CurrentDynamicAppColor == string.Empty)
+                Properties.Settings.Default.CurrentDynamicAppColor = new BrushConverter().ConvertToString(Application.Current.Resources["Brush_LightGray"]);
+
+            Application.Current.Resources["DynamicAppColor"] = new BrushConverter().ConvertFromString(Properties.Settings.Default.CurrentDynamicAppColor);
+        }
 
         /// <summary>
         /// Перемещение окна курсором

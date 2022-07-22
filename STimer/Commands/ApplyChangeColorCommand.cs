@@ -17,6 +17,12 @@ namespace STimer.Commands
 
             SolidColorBrush selectColorBrush = (SolidColorBrush)parameter;
             System.Windows.Application.Current.Resources["DynamicAppColor"] = selectColorBrush;
+
+            string colorString = new BrushConverter().ConvertToString(parameter); // Конвертируем в строку текущую кисть
+
+            Properties.Settings.Default.CurrentDynamicAppColor = colorString; // Запись в настройки - Settings.settings
+            Properties.Settings.Default.Save(); //Сохранение настроек
+            
         }
     }
 }

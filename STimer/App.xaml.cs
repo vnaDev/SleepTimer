@@ -30,7 +30,7 @@ namespace STimer
 
             MainWindow = new MainWindow() 
             { 
-                DataContext = new MainWindowViewModel(_navigationService) 
+                DataContext = new MainWindowViewModel(_navigationService)
             };
             MainWindow.Show();
 
